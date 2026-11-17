@@ -1,8 +1,0 @@
-# Twende Frontend (Flutter)
-
-This folder contains the cross-platform mobile/web application for the **Twende** project, built using **Flutter**.
-
-## Prerequisites
-Make sure you have Flutter installed on your machine. You can check by running:
-```bash
-flutter doctor
