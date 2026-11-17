@@ -1,0 +1,326 @@
+from enum import Enum
+
+
+class TenantStatus(str, Enum):
+    PENDING_APPROVAL = "PENDING_APPROVAL"
+    ACTIVE = "ACTIVE"
+    SUSPENDED = "SUSPENDED"
+    REJECTED = "REJECTED"
+
+
+class UserStatus(str, Enum):
+    ACTIVE = "ACTIVE"
+    INACTIVE = "INACTIVE"
+    SUSPENDED = "SUSPENDED"
+
+
+class RoleDevice(str, Enum):
+    PHONE = "PHONE"
+    LAPTOP = "LAPTOP"
+    PHONE_LAPTOP = "PHONE_LAPTOP"
+
+
+class VehicleClass(str, Enum):
+    CAR = "CAR"
+    TRUCK = "TRUCK"
+
+
+class VehicleStatus(str, Enum):
+    AVAILABLE = "AVAILABLE"
+    RESERVED = "RESERVED"
+    RENTED = "RENTED"
+    RETURNED = "RETURNED"
+    UNDER_INSPECTION = "UNDER_INSPECTION"
+    UNDER_MAINTENANCE = "UNDER_MAINTENANCE"
+    ACCIDENT = "ACCIDENT"
+    OUT_OF_SERVICE = "OUT_OF_SERVICE"
+    SOLD_ARCHIVED = "SOLD_ARCHIVED"
+
+
+class BodyType(str, Enum):
+    SEDAN = "SEDAN"
+    HATCHBACK = "HATCHBACK"
+    SUV = "SUV"
+    FOUR_BY_FOUR = "FOUR_BY_FOUR"
+    VAN = "VAN"
+    MINIBUS = "MINIBUS"
+    PICKUP = "PICKUP"
+    LIGHT_TRUCK = "LIGHT_TRUCK"
+    HEAVY_TRUCK = "HEAVY_TRUCK"
+    FLATBED = "FLATBED"
+    BOX_TRUCK = "BOX_TRUCK"
+    TIPPER = "TIPPER"
+    TANKER = "TANKER"
+
+
+class FuelType(str, Enum):
+    PETROL = "PETROL"
+    DIESEL = "DIESEL"
+    HYBRID = "HYBRID"
+    ELECTRIC = "ELECTRIC"
+
+
+class TransmissionType(str, Enum):
+    AUTOMATIC = "AUTOMATIC"
+    MANUAL = "MANUAL"
+
+
+class OwnershipType(str, Enum):
+    OWNED = "OWNED"
+    LEASED = "LEASED"
+    CONSIGNED = "CONSIGNED"
+
+
+class VehicleDocumentType(str, Enum):
+    INSURANCE = "INSURANCE"
+    REGISTRATION = "REGISTRATION"
+    INSPECTION = "INSPECTION"
+    COMMERCIAL_PERMIT = "COMMERCIAL_PERMIT"
+    OTHER = "OTHER"
+
+
+class FuelPolicy(str, Enum):
+    FULL_TO_FULL = "FULL_TO_FULL"
+    SAME_TO_SAME = "SAME_TO_SAME"
+    FREE_TANK = "FREE_TANK"
+
+
+class CustomerType(str, Enum):
+    INDIVIDUAL = "INDIVIDUAL"
+    CORPORATE = "CORPORATE"
+    GOVERNMENT_NGO = "GOVERNMENT_NGO"
+
+
+class RiskStatus(str, Enum):
+    CLEAR = "CLEAR"
+    WATCH = "WATCH"
+    BLACKLISTED = "BLACKLISTED"
+
+
+class BookingStatus(str, Enum):
+    DRAFT = "DRAFT"
+    CONFIRMED = "CONFIRMED"
+    ACTIVE = "ACTIVE"
+    COMPLETED = "COMPLETED"
+    CANCELLED = "CANCELLED"
+    NO_SHOW = "NO_SHOW"
+
+
+class BookingSource(str, Enum):
+    WALK_IN = "WALK_IN"
+    PHONE = "PHONE"
+    WHATSAPP = "WHATSAPP"
+    PORTAL = "PORTAL"
+    CORPORATE = "CORPORATE"
+
+
+class RentalType(str, Enum):
+    SELF_DRIVE = "SELF_DRIVE"
+    CHAUFFEUR = "CHAUFFEUR"
+    TRUCK_TRIP = "TRUCK_TRIP"
+
+
+class ContractStatus(str, Enum):
+    DRAFT = "DRAFT"
+    ACTIVE = "ACTIVE"
+    RETURNED = "RETURNED"
+    CLOSED = "CLOSED"
+    AMENDED = "AMENDED"
+    CANCELLED = "CANCELLED"
+
+
+class ContractLineType(str, Enum):
+    RENTAL_CHARGE = "RENTAL_CHARGE"
+    EXCESS_KM = "EXCESS_KM"
+    FUEL_SHORTAGE = "FUEL_SHORTAGE"
+    DAMAGE = "DAMAGE"
+    LATE_RETURN = "LATE_RETURN"
+    CLEANING = "CLEANING"
+    DRIVER_ALLOWANCE = "DRIVER_ALLOWANCE"
+    FINE_RECHARGE = "FINE_RECHARGE"
+    EXTRA = "EXTRA"
+
+
+class InspectionType(str, Enum):
+    HANDOVER = "HANDOVER"
+    RETURN = "RETURN"
+    PRE_TRIP = "PRE_TRIP"
+    POST_TRIP = "POST_TRIP"
+
+
+class DamageType(str, Enum):
+    SCRATCH = "SCRATCH"
+    DENT = "DENT"
+    CRACK = "CRACK"
+    TEAR = "TEAR"
+    PUNCTURE = "PUNCTURE"
+    MECHANICAL = "MECHANICAL"
+    OTHER = "OTHER"
+
+
+class DamageSeverity(str, Enum):
+    LOW = "LOW"
+    MEDIUM = "MEDIUM"
+    HIGH = "HIGH"
+    CRITICAL = "CRITICAL"
+
+
+class DamageStatus(str, Enum):
+    REPORTED = "REPORTED"
+    UNDER_ASSESSMENT = "UNDER_ASSESSMENT"
+    APPROVED = "APPROVED"
+    UNDER_REPAIR = "UNDER_REPAIR"
+    REPAIRED = "REPAIRED"
+    INSURANCE_CLAIM = "INSURANCE_CLAIM"
+    CUSTOMER_CHARGED = "CUSTOMER_CHARGED"
+    CLOSED = "CLOSED"
+
+
+class DamageLiability(str, Enum):
+    CUSTOMER = "CUSTOMER"
+    COMPANY = "COMPANY"
+    THIRD_PARTY = "THIRD_PARTY"
+    UNRESOLVED = "UNRESOLVED"
+
+
+class DriverStatus(str, Enum):
+    AVAILABLE = "AVAILABLE"
+    ASSIGNED = "ASSIGNED"
+    ON_LEAVE = "ON_LEAVE"
+    INACTIVE = "INACTIVE"
+
+
+class AssignmentStatus(str, Enum):
+    SCHEDULED = "SCHEDULED"
+    ACTIVE = "ACTIVE"
+    COMPLETED = "COMPLETED"
+    CANCELLED = "CANCELLED"
+
+
+class TripStatus(str, Enum):
+    DRAFT = "DRAFT"
+    DISPATCHED = "DISPATCHED"
+    IN_TRANSIT = "IN_TRANSIT"
+    DELIVERED = "DELIVERED"
+    CLOSED = "CLOSED"
+    CANCELLED = "CANCELLED"
+
+
+class CargoType(str, Enum):
+    DRY_GOODS = "DRY_GOODS"
+    PERISHABLES = "PERISHABLES"
+    BUILDING_MATERIALS = "BUILDING_MATERIALS"
+    FUEL_LIQUIDS = "FUEL_LIQUIDS"
+    CONTAINER = "CONTAINER"
+    HEAVY_MACHINERY = "HEAVY_MACHINERY"
+    GENERAL = "GENERAL"
+
+
+class TripCostType(str, Enum):
+    FUEL = "FUEL"
+    TOLL = "TOLL"
+    BORDER_FEE = "BORDER_FEE"
+    DRIVER_ALLOWANCE = "DRIVER_ALLOWANCE"
+    PARKING = "PARKING"
+    LOADING = "LOADING"
+    WEIGHBRIDGE = "WEIGHBRIDGE"
+    OTHER = "OTHER"
+
+
+class WorkOrderType(str, Enum):
+    PREVENTIVE = "PREVENTIVE"
+    CORRECTIVE = "CORRECTIVE"
+    INSPECTION = "INSPECTION"
+
+
+class WorkOrderStatus(str, Enum):
+    DRAFT = "DRAFT"
+    SCHEDULED = "SCHEDULED"
+    IN_PROGRESS = "IN_PROGRESS"
+    COMPLETED = "COMPLETED"
+    CANCELLED = "CANCELLED"
+
+
+class ClaimStatus(str, Enum):
+    SUBMITTED = "SUBMITTED"
+    UNDER_REVIEW = "UNDER_REVIEW"
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+    SETTLED = "SETTLED"
+
+
+class IncidentType(str, Enum):
+    ACCIDENT = "ACCIDENT"
+    TRAFFIC_VIOLATION = "TRAFFIC_VIOLATION"
+    THEFT = "THEFT"
+    BREAKDOWN = "BREAKDOWN"
+    CUSTOMER_COMPLAINT = "CUSTOMER_COMPLAINT"
+    OTHER = "OTHER"
+
+
+class IncidentStatus(str, Enum):
+    REPORTED = "REPORTED"
+    UNDER_INVESTIGATION = "UNDER_INVESTIGATION"
+    RESOLVED = "RESOLVED"
+    RECHARGED = "RECHARGED"
+    CLOSED = "CLOSED"
+
+
+class InvoiceType(str, Enum):
+    INVOICE = "INVOICE"
+    CREDIT_NOTE = "CREDIT_NOTE"
+    DEBIT_NOTE = "DEBIT_NOTE"
+
+
+class InvoiceStatus(str, Enum):
+    DRAFT = "DRAFT"
+    ISSUED = "ISSUED"
+    PAID = "PAID"
+    PARTIALLY_PAID = "PARTIALLY_PAID"
+    VOID = "VOID"
+
+
+class DepositStatus(str, Enum):
+    HELD = "HELD"
+    APPLIED = "APPLIED"
+    REFUNDED = "REFUNDED"
+    FORFEITED = "FORFEITED"
+
+
+class PaymentMethod(str, Enum):
+    MTN_MOMO = "MTN_MOMO"
+    AIRTEL_MONEY = "AIRTEL_MONEY"
+    CREDIT_CARD = "CREDIT_CARD"
+    BANK_TRANSFER = "BANK_TRANSFER"
+    CASH = "CASH"
+    CORPORATE_CREDIT = "CORPORATE_CREDIT"
+
+
+class PaymentStatus(str, Enum):
+    PENDING = "PENDING"
+    COMPLETED = "COMPLETED"
+    FAILED = "FAILED"
+    REFUNDED = "REFUNDED"
+
+
+class ApprovalDecision(str, Enum):
+    PENDING = "PENDING"
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+
+
+class NotificationChannel(str, Enum):
+    IN_APP = "IN_APP"
+    SMS = "SMS"
+    WHATSAPP = "WHATSAPP"
+    EMAIL = "EMAIL"
+
+
+class AuditAction(str, Enum):
+    CREATE = "CREATE"
+    UPDATE = "UPDATE"
+    DELETE = "DELETE"
+    STATUS_OVERRIDE = "STATUS_OVERRIDE"
+    APPROVE = "APPROVE"
+    REJECT = "REJECT"
+    LOGIN = "LOGIN"
