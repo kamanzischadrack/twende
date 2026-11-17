@@ -44,6 +44,5 @@ class VehicleAvailabilityBlock(TenantModel):
         default="ACTIVE",
         nullable=False
     )
-
     vehicle: Mapped["Vehicle"] = relationship()
 
