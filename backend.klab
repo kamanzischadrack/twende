@@ -1,8 +1,0 @@
-# Twende Backend (Python)
-
-This folder contains the server-side code, API endpoints, and database logic for the **Twende** project, built using **Python**.
-
-## Prerequisites
-Make sure you have Python installed on your computer. You can check by running:
-```bash
-python --version
