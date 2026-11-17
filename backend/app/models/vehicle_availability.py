@@ -36,7 +36,7 @@ class VehicleAvailabilityBlock(TenantModel):
 
     reference_id: Mapped[uuid.UUID | None] = mapped_column(
         UUID(as_uuid=True),
-        nullable=True
+        nullable=False
     )
 
     status: Mapped[str] = mapped_column(
