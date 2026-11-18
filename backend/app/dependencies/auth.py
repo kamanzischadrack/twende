@@ -1,5 +1,4 @@
 from uuid import UUID
-
 import jwt
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
