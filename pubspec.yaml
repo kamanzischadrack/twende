@@ -1,0 +1,57 @@
+name: twende_flutter
+description: Twende — Fleet management app (Flutter edition, iOS, Android, Web, Desktop)
+version: 2.0.0+1
+publish_to: 'none'
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Navigation
+  go_router: ^14.8.1
+
+  # HTTP & Networking
+  dio: ^5.7.0
+
+  # State Management
+  flutter_riverpod: ^2.6.1
+
+  # Secure Storage (JWT token + branch/tenant)
+  flutter_secure_storage: ^9.2.4
+
+  # Formatting & Localizations
+  intl: ^0.20.2
+
+  # Icons
+  cupertino_icons: ^1.0.8
+
+  # Connectivity (online/offline detection)
+  connectivity_plus: ^6.1.0
+
+  # Image capture (handover/return field photos)
+  image_picker: ^1.1.2
+
+  # Signature capture (handover/return)
+  signature: ^5.5.0
+
+  # Path utilities (for local storage)
+  path_provider: ^2.1.0
+  path: ^1.9.0
+  device_preview: ^1.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
